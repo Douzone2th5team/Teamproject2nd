@@ -1,3 +1,4 @@
+
 const express = require('express');
 const app = express();
 const http = require('http').createServer(app);
@@ -26,14 +27,23 @@ app.use(adminRouter);
 app.use(replyRouter);
 app.use(inquiryRouter);
 
+
 app.use((req, res, next) => {
     const error = new Error(`${req.method} ${req.url} 라우터가 없습니다.`);
     error.status = 404;
     next(error);
 });
 
+const io = require('socket.io')(http, {
+    cors: {
+        origin: ["http://localhost:3000"],
+        methods: ["GET", "POST"],
+        credentials: true
+    }
+});
 
 http.listen(3001, () => {
     console.log('3001번포트로 실행중');
 });
+
 
