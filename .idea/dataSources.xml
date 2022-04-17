@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="database_development@kosa2.iptime.org" uuid="e2de40b2-b4b4-4b8a-8cbd-7895b2cde49e">
+    <data-source source="LOCAL" name="DB_Dev@kosa2.iptime.org" uuid="51b49661-6c82-44ed-aa84-99e5cf706216">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>

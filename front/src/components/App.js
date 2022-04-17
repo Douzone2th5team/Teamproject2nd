@@ -1,13 +1,19 @@
 import React from 'react';
-import Login from '@components/Login';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+//사용자 페이
+import SignInPage from './signInPage';
 
 function App () {
 
     return (
-        <div>
-            <Login />
-        </div>
+        <>
+            <Router>
+                <Routes>
+                    <Route path={"/"} element={<SignInPage/>}/>
+                </Routes>
+            </Router>
+        </>
     )
 }
-
 export default App;
