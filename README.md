@@ -34,4 +34,4 @@
 
 
 ## ERD
-<img src="https://github.com/Quence1151/Teamproject2nd/blob/main/doc/img/ERD(ver.1).png" width="1100px" height="300px" title="px(픽셀) 크기 설정"></img><br/>
+<img src="https://github.com/Quence1151/Teamproject2nd/blob/main/doc/img/ERD(ver.3).png" width="1100px" height="300px" title="px(픽셀) 크기 설정"></img><br/>

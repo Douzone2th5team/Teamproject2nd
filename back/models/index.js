@@ -1,49 +1,47 @@
+const Sequelize = require('sequelize');
+const Chat = require('./Chat');
+const Member = require('./Member');
+const Friend = require('./Friend');
+const Post = require('./Post');
+const PostImg = require('./PostImg');
+const Reply = require('./Reply');
+const Room = require('./Room');
+const RoomMem = require('./RoomMem')
 
-const express = require('express');
-const app = express();
-const http = require('http').createServer(app);
-const { sequelize } = require('./models');
+const env = process.env.NODE_ENV || 'development';
+const config = require(__dirname + '/../config/config.json')[env];
+const db = {};
 
-const mainRouter = require('./routes/main.js');
-const postRouter = require('./routes/post.js');
-const memberRouter = require('./routes/member.js');
-const adminRouter = require('./routes/admin.js');
-const replyRouter = require('./routes/reply.js');
-const inquiryRouter = require('./routes/inquiry.js');
+const sequelize = new Sequelize(config.database, config.username, config.password, config);
 
+db.sequelize = sequelize;
 
-sequelize.sync({ force: false })
-    .then(() => {
-        console.log('데이터베이스 연결 성공')
-    })
-    .catch((err) => {
-        console.error(err);
-    })
+db.Chat = Chat;
+db.Member = Member;
+db.Post = Post;
+db.PostImg = PostImg;
+db.Reply = Reply;
+db.Room = Room;
+db.RoomMem = RoomMem;
+db.Friend = Friend;
 
-app.use(memberRouter);
-app.use(mainRouter);
-app.use(postRouter);
-app.use(adminRouter);
-app.use(replyRouter);
-app.use(inquiryRouter);
+Chat.init(sequelize);
+Member.init(sequelize);
+Post.init(sequelize);
+PostImg.init(sequelize);
+Reply.init(sequelize);
+Room.init(sequelize);
+RoomMem.init(sequelize);
+Friend.init(sequelize);
 
-
-app.use((req, res, next) => {
-    const error = new Error(`${req.method} ${req.url} 라우터가 없습니다.`);
-    error.status = 404;
-    next(error);
-});
-
-const io = require('socket.io')(http, {
-    cors: {
-        origin: ["http://localhost:3000"],
-        methods: ["GET", "POST"],
-        credentials: true
-    }
-});
-
-http.listen(3001, () => {
-    console.log('3001번포트로 실행중');
-});
+Chat.associate(db);
+Member.associate(db);
+Post.associate(db);
+PostImg.associate(db);
+Reply.associate(db);
+Room.associate(db);
+RoomMem.associate(db);
+Friend.associate(db);
 
 
+module.exports = db;
