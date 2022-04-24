@@ -8,5 +8,12 @@
       <jdbc-url>jdbc:mysql://kosa2.iptime.org:50332/database_development</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="dzproject2nd@kosa2.iptime.org" uuid="3fe052c9-16e8-40a3-a452-7602330df7ab">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://kosa2.iptime.org:50332/dzproject2nd</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>
