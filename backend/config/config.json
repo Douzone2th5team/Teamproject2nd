@@ -1,0 +1,12 @@
+{
+  "development": {
+    "username": "admin_b",
+    "user" : "admin_b",
+    "password": "1234",
+    "database": "dzproject2nd",
+    "host": "kosa2.iptime.org",
+    "port": "50332",
+    "dialect": "mysql",
+    "multipleStatements": "true"
+  }
+}
