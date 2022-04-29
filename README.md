@@ -1,10 +1,10 @@
-# Teamproject2nd
+# Aspacio_Teamproject2nd
 
 ## 개요
 - 기간 : 2022.04.15 ~ 2022.04.22
 - 주제 : SNS
 - 개발 환경 : IntelliJ, VScode
-- 사용 언어 : expressJS(nodeJS), react
+- 사용 언어 : Node.js(express), react
 - DataBase : MySQL
 
 ## 프로젝트 구조도
