@@ -9,8 +9,8 @@
 
 ## 프로젝트 구조도
 <img src="https://github.com/Quence1151/Teamproject2nd/blob/main/doc/img/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B5%AC%EC%A1%B0%EB%8F%84(ver.0).png" width="1100px" height="300px" title="px(픽셀) 크기 설정"></img><br/>
-<img width="400" height="400px" alt="backend" src="https://user-images.githubusercontent.com/77228818/165880536-b9d47ca0-6d35-4052-8650-1506997d99a8.PNG">
-<img width="400" height="400px" alt="frontend" src="https://user-images.githubusercontent.com/77228818/165880540-49ece0dc-f85c-4120-b6d1-8765ffad8790.PNG">
+<img width="400" height="400" alt="frontend2" src="https://user-images.githubusercontent.com/77228818/165890288-1fe1bdf2-1db8-4f44-a9b5-8d72d52244bb.PNG">
+<img width="400" height="400" alt="backend" src="https://user-images.githubusercontent.com/77228818/165890292-6d69e8b6-b009-40b9-ba3c-2b8519021c7c.PNG">
 
 
 ## 기능 요구 사항
